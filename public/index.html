@@ -7,24 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-
-    <script>
-        async function callapi(){
-            const res = await fetch("http://localhost:3000/",{
-                method:"POST",
-                headers:{
-                    'content-type':"application/json"
-                },
-                body:JSON.stringify({
-                    name:"Subhajit"
-                })
-            });
-            const data = await res.json();
-
-            console.log(data)
-        }
-        callapi()
-    </script>
+    <h1>Hello This is express app</h1>
 </body>
 </html>

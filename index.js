@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors")
 const app = express();
+const {route} = require("./routes/route1");
 const PORT = process.env.PORT || 3001;
 console.log(__dirname);
 
@@ -27,6 +28,8 @@ app.post("/",(req,res)=>{
         "name":req.body.name
     })
 })
+
+app.use("/h1",route);
 
 app.listen(3000,()=>{
     console.log("App is running  at http://localhost:3000...")
